@@ -1,18 +1,6 @@
 CURRENT_FILE=${BASH_SOURCE:-bats/helpers/.}
 source "$(dirname "$CURRENT_FILE")/_common.bash"
 
-bitcoind_init() {
-  bitcoin_cli createwallet "outside" || true
-  bitcoin_cli -generate 200 > /dev/null 2>&1
-
-  bitcoin_signer_cli createwallet "dev" || true
-  bitcoin_signer_cli -rpcwallet=dev importdescriptors "$(cat ${CORE_ROOT}/test/bats/bitcoind_signer_descriptors.json)"
-}
-
-bitcoin_signer_cli() {
-  docker exec "${COMPOSE_PROJECT_NAME}-bitcoind-signer-1" bitcoin-cli $@
-}
-
 fund_user_onchain() {
   local token_name=$1
   local wallet_id_name="$token_name.${2}_id" # btc_wallet or usd_wallet
