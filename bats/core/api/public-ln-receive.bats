@@ -6,12 +6,38 @@ load "../../helpers/onchain.bash"
 load "../../helpers/ln.bash"
 load "../../helpers/wallet.bash"
 load "../../helpers/subscriber.bash"
+load "../../helpers/setup-and-teardown.bash"
 
 setup_file() {
+  clear_cache
+
+  bitcoind_init
+  start_trigger
+  start_server
+  start_ws_server
+  start_exporter
+
   create_user 'alice'
   user_update_username 'alice'
   fund_user_onchain 'alice' 'btc_wallet'
   fund_user_onchain 'alice' 'usd_wallet'
+}
+
+teardown_file() {
+  stop_trigger
+  stop_server
+  stop_ws_server
+  stop_exporter
+}
+
+setup() {
+  reset_redis
+}
+
+teardown() {
+  if [[ "$(balance_for_check)" != 0 ]]; then
+    fail "Error: balance_for_check failed"
+  fi
 }
 
 btc_amount=1000
