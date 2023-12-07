@@ -43,8 +43,8 @@ importers:
         specifier: ^0.43.0
         version: 0.43.0(@opentelemetry/api@1.6.0)
       '@opentelemetry/sdk-trace-node':
-        specifier: ^1.17.0
-        version: 1.17.0(@opentelemetry/api@1.6.0)
+        specifier: ^1.18.1
+        version: 1.18.1(@opentelemetry/api@1.6.0)
       '@opentelemetry/semantic-conventions':
         specifier: ^1.17.0
         version: 1.17.0
@@ -200,8 +200,8 @@ importers:
         specifier: ^0.43.0
         version: 0.43.0(@opentelemetry/api@1.6.0)
       '@opentelemetry/sdk-trace-node':
-        specifier: ^1.17.0
-        version: 1.17.0(@opentelemetry/api@1.6.0)
+        specifier: ^1.18.1
+        version: 1.18.1(@opentelemetry/api@1.6.0)
       '@opentelemetry/semantic-conventions':
         specifier: ^1.17.0
         version: 1.17.0
@@ -605,7 +605,7 @@ importers:
         version: 5.14.2(graphql@16.8.1)
       gt3-server-node-express-sdk:
         specifier: git+https://github.com/GaloyMoney/gt3-server-node-express-bypass.git#master
-        version: github.com/GaloyMoney/gt3-server-node-express-bypass/6559a1a39ef408de3aefa6321934c831edac001e
+        version: git@github.com+GaloyMoney/gt3-server-node-express-bypass/6559a1a39ef408de3aefa6321934c831edac001e
       i18n:
         specifier: ^0.15.1
         version: 0.15.1
@@ -6964,6 +6964,15 @@ packages:
       '@opentelemetry/api': 1.6.0
     dev: false
 
+  /@opentelemetry/context-async-hooks@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-HHfJR32NH2x0b69CACCwH8m1dpNALoCTtpgmIWMNkeMGNUeKT48d4AX4xsF4uIRuUoRTbTgtSBRvS+cF97qwCQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+    dev: false
+
   /@opentelemetry/context-async-hooks@1.18.1(@opentelemetry/api@1.7.0):
     resolution: {integrity: sha512-HHfJR32NH2x0b69CACCwH8m1dpNALoCTtpgmIWMNkeMGNUeKT48d4AX4xsF4uIRuUoRTbTgtSBRvS+cF97qwCQ==}
     engines: {node: '>=14'}
@@ -6981,6 +6990,16 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.6.0
       '@opentelemetry/semantic-conventions': 1.17.0
+    dev: false
+
+  /@opentelemetry/core@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-kvnUqezHMhsQvdsnhnqTNfAJs3ox/isB0SVrM1dhVFw7SsB7TstuVa6fgWnN2GdPyilIFLUvvbTZoVRmx6eiRg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/semantic-conventions': 1.18.1
     dev: false
 
   /@opentelemetry/core@1.18.1(@opentelemetry/api@1.7.0):
@@ -7332,6 +7351,16 @@ packages:
       '@opentelemetry/core': 1.17.0(@opentelemetry/api@1.6.0)
     dev: false
 
+  /@opentelemetry/propagator-b3@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-oSTUOsnt31JDx5SoEy27B5jE1/tiPvvE46w7CDKj0R5oZhCCfYH2bbSGa7NOOyDXDNqQDkgqU1DIV/xOd3f8pw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/core': 1.18.1(@opentelemetry/api@1.6.0)
+    dev: false
+
   /@opentelemetry/propagator-b3@1.18.1(@opentelemetry/api@1.7.0):
     resolution: {integrity: sha512-oSTUOsnt31JDx5SoEy27B5jE1/tiPvvE46w7CDKj0R5oZhCCfYH2bbSGa7NOOyDXDNqQDkgqU1DIV/xOd3f8pw==}
     engines: {node: '>=14'}
@@ -7350,6 +7379,16 @@ packages:
     dependencies:
       '@opentelemetry/api': 1.6.0
       '@opentelemetry/core': 1.17.0(@opentelemetry/api@1.6.0)
+    dev: false
+
+  /@opentelemetry/propagator-jaeger@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-Kh4M1Qewv0Tbmts6D8LgNzx99IjdE18LCmY/utMkgVyU7Bg31Yuj+X6ZyoIRKPcD2EV4rVkuRI16WVMRuGbhWA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/core': 1.18.1(@opentelemetry/api@1.6.0)
     dev: false
 
   /@opentelemetry/propagator-jaeger@1.18.1(@opentelemetry/api@1.7.0):
@@ -7376,6 +7415,17 @@ packages:
       '@opentelemetry/api': 1.6.0
       '@opentelemetry/core': 1.17.0(@opentelemetry/api@1.6.0)
       '@opentelemetry/semantic-conventions': 1.17.0
+    dev: false
+
+  /@opentelemetry/resources@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-JjbcQLYMttXcIabflLRuaw5oof5gToYV9fuXbcsoOeQ0BlbwUn6DAZi++PNsSz2jjPeASfDls10iaO/8BRIPRA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/core': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/semantic-conventions': 1.18.1
     dev: false
 
   /@opentelemetry/resources@1.18.1(@opentelemetry/api@1.7.0):
@@ -7477,6 +7527,18 @@ packages:
       '@opentelemetry/semantic-conventions': 1.17.0
     dev: false
 
+  /@opentelemetry/sdk-trace-base@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-tRHfDxN5dO+nop78EWJpzZwHsN1ewrZRVVwo03VJa3JQZxToRDH29/+MB24+yoa+IArerdr7INFJiX/iN4gjqg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/core': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/resources': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/semantic-conventions': 1.18.1
+    dev: false
+
   /@opentelemetry/sdk-trace-base@1.18.1(@opentelemetry/api@1.7.0):
     resolution: {integrity: sha512-tRHfDxN5dO+nop78EWJpzZwHsN1ewrZRVVwo03VJa3JQZxToRDH29/+MB24+yoa+IArerdr7INFJiX/iN4gjqg==}
     engines: {node: '>=14'}
@@ -7501,6 +7563,21 @@ packages:
       '@opentelemetry/propagator-b3': 1.17.0(@opentelemetry/api@1.6.0)
       '@opentelemetry/propagator-jaeger': 1.17.0(@opentelemetry/api@1.6.0)
       '@opentelemetry/sdk-trace-base': 1.17.0(@opentelemetry/api@1.6.0)
+      semver: 7.5.4
+    dev: false
+
+  /@opentelemetry/sdk-trace-node@1.18.1(@opentelemetry/api@1.6.0):
+    resolution: {integrity: sha512-ML0l9TNlfLoplLF1F8lb95NGKgdm6OezDS3Ymqav9sYxMd5bnH2LZVzd4xEF+ov5vpZJOGdWxJMs2nC9no7+xA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@opentelemetry/api': '>=1.0.0 <1.8.0'
+    dependencies:
+      '@opentelemetry/api': 1.6.0
+      '@opentelemetry/context-async-hooks': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/core': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/propagator-b3': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/propagator-jaeger': 1.18.1(@opentelemetry/api@1.6.0)
+      '@opentelemetry/sdk-trace-base': 1.18.1(@opentelemetry/api@1.6.0)
       semver: 7.5.4
     dev: false
 
@@ -22461,8 +22538,8 @@ packages:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: false
 
-  github.com/GaloyMoney/gt3-server-node-express-bypass/6559a1a39ef408de3aefa6321934c831edac001e:
-    resolution: {tarball: https://codeload.github.com/GaloyMoney/gt3-server-node-express-bypass/tar.gz/6559a1a39ef408de3aefa6321934c831edac001e}
+  git@github.com+GaloyMoney/gt3-server-node-express-bypass/6559a1a39ef408de3aefa6321934c831edac001e:
+    resolution: {commit: 6559a1a39ef408de3aefa6321934c831edac001e, repo: git@github.com:GaloyMoney/gt3-server-node-express-bypass.git, type: git}
     name: gt3-server-node-express-sdk
     version: 3.1.0
     dependencies:
